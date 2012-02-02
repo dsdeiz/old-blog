@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+}
+
+a,
+a:visited,
+a:link {
+  color: #a00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+ font-family: monaco, "Lucida Console", courier, monospace;
+ font-size: 12px;
+}
+
+.container {
+  width: 750px;
+  margin: 0 auto;
+}
+
+.post-container {
+  margin-bottom: 20px;
+}
+
+h2.title {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.post-title {
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.post-date {
+  color: #999;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 14px;
+}
+
+.post-body {
+  font-family: "Droid Sans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.site-name {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+ul.list-gallery,
+ul.list-gallery li {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.list-gallery li {
+  float: left;
+  width: 150px;
+  text-align: center;
+}
+
+ul.list-gallery li a img {
+  border: 3px solid #666666;
+}
+
+ul.list-gallery li a:hover img {
+  border-color: #08c;
+}

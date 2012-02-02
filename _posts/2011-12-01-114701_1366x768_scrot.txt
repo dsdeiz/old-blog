@@ -1,0 +1,6 @@
+---
+layout: gallery
+category: gallery
+thumb: /images/screenies/thumbs/2011-12-01-114701_1366x768_scrot-thumb.png
+image: /images/screenies/2011-12-01-114701_1366x768_scrot.png
+---

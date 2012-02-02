@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>{{ site.name }} &mdash; {{ page.title }}</title>
+  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="/css/monokai.css" type="text/css" media="screen" charset="utf-8" />
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="container">
+    <h1 class="site-name"><a href="{{ site.baseurl }}">// {{ site.name }}</a></h1>
+    {{ content }}
+    {% include footer.html %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div id="blog">
+  <h2 class="title">{{ page.title }}</h2>
+  <div class="post-container">
+    <div class="post-date">Posted on {{ page.date | date_to_long_string }}</div>
+    <div class="post-body">
+      {{ content }}
+    </div>
+  </div>
+</div>
