@@ -1,6 +1,6 @@
 ---
 layout: gallery
 category: gallery
-thumb: /images/screenies/thumbs/2012-01-03-100313_1366x768_scrot-thumb.png
-image: /images/screenies/2012-01-03-100313_1366x768_scrot.png
+thumb: http://dl.dropbox.com/u/24796303/screenies/thumbs/2012-01-03-100313_1366x768_scrot-thumb.png
+image: http://dl.dropbox.com/u/24796303/screenies/2012-01-03-100313_1366x768_scrot.png
 ---

@@ -1,6 +1,0 @@
----
-layout: gallery
-category: gallery
-thumb: /images/screenies/thumbs/scrotwm-thumb.png
-image: /images/screenies/scrotwm.png
----
