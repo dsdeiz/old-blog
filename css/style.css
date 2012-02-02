@@ -16,6 +16,21 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Don't like 'em */
+a[href^="http:"],
+a[href^="mailto:"],
+a[href^="http:"]:visited,
+a[href$=".pdf"],
+a[href$=".doc"],
+a[href$=".xls"],
+a[href$=".rss"],
+a[href$=".rdf"],
+a[href^="aim:"],
+a[href^="http://dsdeiz.github.com"] {
+  background-image: none;
+  padding: 0;
+}
+
 code {
  font-family: monaco, "Lucida Console", courier, monospace;
  font-size: 12px;
@@ -61,6 +76,8 @@ ul.list-gallery li {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
+  width: 100%;
+  overflow: hidden;
 }
 
 ul.list-gallery li {
@@ -75,4 +92,33 @@ ul.list-gallery li a img {
 
 ul.list-gallery li a:hover img {
   border-color: #08c;
+}
+
+.footer {
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 12px;
+  padding: 10px 0 0;
+  border-top: 1px solid #666;
+}
+
+.footer .block {
+  float: left;
+  width: 50%;
+}
+
+.footer .first {
+  text-align: left;
+}
+
+.footer .last {
+  text-align: right;
+}
+
+.footer ul,
+.footer ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
