@@ -1,0 +1,6 @@
+---
+layout: gallery
+category: gallery
+thumb: http://dl.dropbox.com/u/24796303/screenies/thumbs/scrotwm-thumb.png
+image: http://dl.dropbox.com/u/24796303/screenies/scrotwm.png
+---

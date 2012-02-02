@@ -33,4 +33,4 @@ Screenshots for my __Redmine__ installation :D:
 
 [<img src="http://dl.dropbox.com/u/24796303/blog/Pathauto%20Batch%20-%20pathauto_batch.module%20-%20Redmine_1280237875077.png" width="383" />](http://dl.dropbox.com/u/24796303/blog/Pathauto%20Batch%20-%20pathauto_batch.module%20-%20Redmine_1280237875077.png)
 
-I still haven't played much with Redmine though. I would really like __Syntax Highlighting__ for __.module__ files but haven't look into it yet. Redmine++! Oh, and demo for __Redmine__ can be found [here](http://demo.redmine.org/). :D
+I still haven't played much with Redmine though. I would really like __Syntax Highlighting__ for __.module__ files but haven't look into it yet. Redmine++! Oh, and the demo for __Redmine__ can be found [here](http://demo.redmine.org/). :D
