@@ -18,6 +18,8 @@ function MODULE_menu() {
     'type' => MENU_CALLBACK,
     'access callback' => TRUE,
   );
+
+  return $items;
 }
 {% endhighlight %}
 
