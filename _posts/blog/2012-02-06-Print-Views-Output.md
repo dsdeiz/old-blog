@@ -37,7 +37,7 @@ function MODULE_menu_callback() {
 Now, I could just do a simple ajax call to use the output inside any element like so:
 
 {% highlight javascript %}
-$.get(Drupal.settings.basePath + '/example/js', function(data) {
+$.get(Drupal.settings.basePath + 'example/js', function(data) {
   $('.some-element').html(data);
 });
 {% endhighlight %}
