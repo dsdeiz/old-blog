@@ -34,6 +34,6 @@ function module_apachesolr_query_alter($query) {
 }
 {% endhighlight %}
 
-In here, I've used `addFilterSubQuery` for the final query as when you do `$query->addFilter('bundle', 'faq'); $query->addFilterSubQuery($filter)`, the operator would be **AND**.
+In here, I've used `addFilterSubQuery` for the final query as when you do `$query->addFilter('bundle', 'faq'); $query->addFilterSubQuery($filter)`, the operator would be **AND**. For filtering, you can go to `admin/reports/apachesolr` to find the available fields.
 
 Cheers! :D
