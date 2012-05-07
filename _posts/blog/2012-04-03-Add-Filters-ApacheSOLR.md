@@ -6,7 +6,7 @@ category: blog
 
 To add simple filters on your search query with [apachesolr](http://drupal.org/project/apachesolr) can be easily done through `hook_apachesolr_query_alter`. You'll find the documentation on `path/to/apachesolr/apachesolr.api.php`. An example would be:
 
-```php
+{% highlight php %}
 <?php
 function module_apachesolr_query_alter($query) {
   $query->addFilter('bundle', 'page');
@@ -14,7 +14,7 @@ function module_apachesolr_query_alter($query) {
   // To filter by either page or article content type
   $query->addFilter('bundle', 'page OR article');
 }
-```
+{% endhighlight %}
 
 For adding subqueries (which is a bit different), you may do this:
 
