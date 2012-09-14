@@ -42,11 +42,11 @@ function MY_FEATURE_field_widget_form_alter(...) {
 }
 {% endhighlight %}
 
-This posts a problem for the ajax function since the path becomes 'system/ajax'. So I had to remove it, and now the alteration affects all the places the field is located. xD
+This posts a problem for the ajax function since the path becomes 'system/ajax'. So I had to remove it, and now the alteration affects all the places the field is located. This includes the field's settings form. xD
 
 In `hook_field_widget_form_alter()`, I added a `#theme` property to display the images and description. In the theme function, I also made some alterations on the element. I wasn't able to do this on the widget form alter since the element didn't have the individual checkboxes in it.
 
-I've altered the node form itself and set `#access` for each fields to `FALSE`. I've also set the `#access` to `FALSE` for the vertical tabs to hide them. Theme isn't really designed for admin purposes so vertical tabs didn't have much attention on styling. There was also another field that was created just for storing a value and shouldn't be accessible as well. Hid that field as well. :D
+I've altered the node form itself and set `#access` for each fields to `FALSE`. I've also set the `#access` to `FALSE` for the vertical tabs to hide them. Theme isn't really designed for admin purposes so vertical tabs didn't have much attention on styling. There was also another field that was created just for storing a value and shouldn't be accessible as well. Hid that field once again. :D
 
 The email address field needs to be unique. I was able to do this with the [Field validation](http://drupal.org/project/field_validation) module. Error messages for the required fields to be custom too. This was a problem for me since Drupal by default has the message "[field_name] field is required." and isn't changeable. Or perhaps I just don't know how. I've disabled the "Required field" on the remaining fields so I can just do my custom validation. I've implemented `hook_field_attach_validate()` to achieve this.
 
