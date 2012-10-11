@@ -1,0 +1,43 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size:    18px;
+$base-line-height:  28px;
+
+@include establish-baseline;
+
+$serif:       'Fenix', Georgia, "Times New Roman", "DejaVu Serif", serif;
+$sans-serif:  Verdana, Tahoma, "DejaVu Sans", sans-serif;
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: $serif;
+}
+
+h1 {
+  @include adjust-font-size-to(2 * $base-font-size);
+}
+
+h2 {
+  @include adjust-font-size-to(1.5  * $base-font-size);
+}
+
+h3 {
+  @include adjust-font-size-to(1.17  * $base-font-size);
+}
+
+h4 {
+  @include adjust-font-size-to(1  * $base-font-size);
+}
+
+h5 {
+  @include adjust-font-size-to(0.83  * $base-font-size);
+}
