@@ -5,7 +5,7 @@ created: 1268061371
 category: blog
 ---
 
-Removing a class from the variable [code]$body_classes[/code] is very simple. All you need to do is make some changes on the variable in the [code]SUBTHEME_preprocess_page[/code] function.
+Removing a class from the variable `$body_classes` is very simple. All you need to do is make some changes on the variable in the `SUBTHEME_preprocess_page` function.
 
 I have done this with a [Zen](http://drupal.org/project/zen) subtheme:
 
