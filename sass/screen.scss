@@ -1,43 +1,288 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "normalize";
 
-@import "compass/reset";
-@import "compass/typography/vertical_rhythm";
+// ================================================================================
+// Global styles
+// ================================================================================
 
-$base-font-size:    18px;
-$base-line-height:  28px;
-
-@include establish-baseline;
-
-$serif:       'Fenix', Georgia, "Times New Roman", "DejaVu Serif", serif;
-$sans-serif:  Verdana, Tahoma, "DejaVu Sans", sans-serif;
-
-html,
-button,
-input,
-select,
-textarea {
-  font-family: $serif;
+body {
+  background:  transparent image-url('light-background.png') repeat;
+  color:       #333333;
 }
 
-h1 {
-  @include adjust-font-size-to(2 * $base-font-size);
+.header-container {
+  background:     transparent image-url('dark-background.png') repeat;
+  border-bottom:  2px solid #fff;
 }
 
-h2 {
-  @include adjust-font-size-to(1.5  * $base-font-size);
+#{headings()} {
+  font-family: $sans-serif;
 }
 
-h3 {
-  @include adjust-font-size-to(1.17  * $base-font-size);
+a {
+  &:link,
+  &:visited {
+    @include transition-property();
+    @include transition-duration(0.5s);
+
+    text-decoration:  none;
+    color:            #333;
+    border-bottom:    1px dashed #333;
+  }
+
+  &:hover,
+  &:focus {
+    color:         #E02F2F;
+    border-color:  #E02F2F;
+  }
 }
 
-h4 {
-  @include adjust-font-size-to(1  * $base-font-size);
+small {
+  font-size: 90%;
 }
 
-h5 {
-  @include adjust-font-size-to(0.83  * $base-font-size);
+code,
+kbd,
+pre,
+samp {
+  @include border-radius(4px);
+
+  fony-family:       $monospace;
+  background-color:  #dcdcdc;
+  padding:           2px 4px;
+  font-size:         14px;
+}
+
+.highlight {
+  @include border-radius(6px);
+
+  padding: 12px;
+
+  pre {
+    @include border-radius(0);
+
+    padding:           0;
+    background-color:  transparent;
+    margin:            0;
+  }
+
+  code {
+    @include border-radius(0);
+
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+// ================================================================================
+// Layout
+// ================================================================================
+
+.header-container {
+  @include padding-leader;
+  @include padding-trailer;
+
+  header {
+    @include container;
+    clear: both;
+
+    h1 {
+      clear:       both;
+      margin:      0;
+      padding:     0;
+      text-align:  center;
+
+      a {
+        @include transition-property(none);
+        @include replace-text('logo.png');
+
+        display:        block;
+        border-bottom:  0;
+      }
+    }
+
+    nav {
+      text-align:  center;
+      clear:       both;
+
+      ul {
+        @include inline-block-list(6px);
+
+        li a {
+          &:focus,
+          &:hover {
+            border-bottom: 1px dashed #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  .main {
+    @include container;
+    /* @include susy-grid-background; */
+
+    clear: both;
+  }
+
+  .main {
+    .content {
+      @include span-columns(10, 14);
+    }
+
+    aside {
+      @include span-columns(4 omega, 14);
+    }
+  }
+}
+
+.footer-container {
+  @include padding-leader;
+  @include padding-trailer;
+
+  footer {
+    @include container;
+
+    .view-source {
+      @include span-columns(7, 14);
+    }
+
+    .site-info {
+      @include span-columns(7 omega, 14);
+    }
+  }
+}
+
+// ================================================================================
+// Custom styles
+// ================================================================================
+
+ul.social {
+  @include horizontal-list(6px);
+
+  a {
+    &:link,
+    &:visited {
+    }
+  }
+}
+
+.main-container {
+  #{headings()} {
+    @include single-text-shadow(0, 1px);
+  }
+
+  article {
+    ul:not(.links) {
+      padding-left: 0;
+
+      li {
+        list-style:   none;
+        margin-left:  $indent-amount;
+        position:     relative;
+
+        &:before {
+          // See http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/ for this technique.
+          position:    absolute;
+          left:        -$indent-amount;
+          width:       $indent-amount;
+          content:     "\f054";
+          text-align:  center;
+          top:         2px;
+
+          // Copy what's in an 'icon-*' class.
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          display: inline-block;
+          text-decoration: inherit;
+        }
+      }
+    }
+
+    ul.links {
+      @include horizontal-list;
+      @include leader;
+      @include trailer;
+    }
+  }
+}
+
+nav ul {
+  font-style: italic;
+
+  li a {
+    &:link,
+    &:visited {
+      @include transition-property(none);
+
+      color: #fff;
+    }
+
+    &:focus,
+    &:hover {
+    }
+  }
+}
+
+.recent-blog-posts ul {
+  @include no-bullets;
+
+  margin-left:   0;
+  padding-left:  0;
+
+  li {
+    @include trailer(0.5);
+  }
+}
+
+.post {
+  @include trailer; 
+
+  clear: both;
+
+  header {
+    @include trailer;
+
+    h2 {
+      @include trailer(0);
+
+      a {
+        border-bottom: 0;
+      }
+    }
+
+    .meta {
+      padding-left:  26px;
+    }
+  }
+
+  section.post-content {
+    padding-left: 26px;
+
+    ul.links {
+      @include leader;
+      @include trailer(0);
+    }
+  }
+}
+
+article .meta {
+  font-style:    italic;
+  color:         #999;
+}
+
+.post-title {
+  @include trailer(0)
+}
+
+footer {
+  section {
+    font-size: 80%;
+  }
+
+  .site-info {
+    text-align: right;
+  }
 }

@@ -3,6 +3,7 @@ layout: post
 title: Current Xmonad Setup
 category: blog
 created: 1265729463
+tags: [xmonad, linux]
 ---
 
 My `xmonad.hs`:

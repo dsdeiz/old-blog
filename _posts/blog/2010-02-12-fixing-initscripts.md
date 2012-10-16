@@ -3,6 +3,7 @@ layout: post
 title: Fixing Initscripts
 created: 1265946656
 category: blog
+tags: [linux, initscripts]
 ---
 
 I had a problem yesterday with my [Archlinux](http://archlinux.org) installation. Everything was just going fine until I restarted my computer. Arch was trying to load the daemons and modules but can't seem to do it as there was an error saying __"Read-only filesystem"__.

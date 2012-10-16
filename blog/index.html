@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog Posts
+---
+{% for post in site.categories.blog %}
+<article class="post">
+  <header>
+    <h2><a href="#"><i class="icon-plus"></i><i class="icon-minus"></i> {{ post.title }}</a></h2>
+    <small class="meta">Posted on <time datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time></small>
+  </header>
+
+  <section class="post-content">
+    {{ post.content | strip_html | truncate: 600 }}
+
+    <ul class="links">
+      <li><a href="{{ post.url }}">Read more &raquo;</a></li>
+    </ul>
+  </section>
+</article>
+{% endfor %}

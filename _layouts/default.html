@@ -1,53 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <!-- Only temporary for development. -->
   <meta http-equiv="Cache-Control" content="no-cache">
   <title>{{ site.name }} &mdash; {{ page.title }}</title>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
-  <!--[if IE]>
-      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
-  <link href='http://fonts.googleapis.com/css?family=Fenix&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/fruity.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
 </head>
-<body>
-  <div class="container">
-    <h1 class="site-name"><a href="{{ site.baseurl }}">// {{ site.name }}</a></h1>
-    {{ content }}
+<body class="page">
+  <div class="header-container">
+    <header class="header">
+      <h1><a href="{{ site.baseurl }}">fr.ench.info</a></h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="{{ site.baseurl }}">Home</a></li>
+          <li><a href="/about.html">About</a><li>
+          <li><a href="/blog">Blog</a><li>
+          <li><a href="/contact.html">Contact</a><li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="main-container">
+    <div class="main">
+      <div class="content">
+        {{ content }}
+      </div>
+      {% include aside.html %}
+    </div>
+  </div>
+  <div class="footer-container">
     {% include footer.html %}
   </div>
-  <!--
-  <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-  <script>
-  new TWTR.Widget({
-    version: 2,
-    type: 'profile',
-    rpp: 5,
-    interval: 30000,
-    width: 250,
-    height: 300,
-    theme: {
-      shell: {
-        background: '#aa0000',
-        color: '#ffffff'
-      },
-      tweets: {
-        background: '#ffffff',
-        color: '#333333',
-        links: '#aa0000'
-      }
-    },
-    features: {
-      scrollbar: false,
-      loop: false,
-      live: false,
-      behavior: 'all'
-    }
-  }).render().setUser('breadpan').start();
-  </script>
-  -->
+
+  <script src="/javascripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/javascripts/jquery.cycle.all.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/javascripts/script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
