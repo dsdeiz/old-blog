@@ -1,9 +1,11 @@
 $base-font-size:    16px;
 $base-line-height:  24px;
 
-$serif:             'Arbutus Slab', Georgia, "Times New Roman", "DejaVu Serif", serif;
-$sans-serif:        'Carrois Gothic', Verdana, Tahoma, "DejaVu Sans", sans-serif;
-$monospace:         'Bitstream Vera Sans Mono', monospace;
+$special-serif:       'Arbutus Slab';
+$special-sans-serif:  'Carrois Gothic';
+$serif:               $special-serif, Georgia, "Times New Roman", "DejaVu Serif", serif;
+$sans-serif:          $special-sans-serif, Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$monospace:           'Bitstream Vera Sans Mono', monospace;
 
 $base-font-family:  $serif;
 
